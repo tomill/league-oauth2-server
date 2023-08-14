@@ -133,6 +133,6 @@ class BearerTokenValidator implements AuthorizationValidatorInterface
      */
     private function convertSingleRecordAudToString($aud)
     {
-        return \is_countable($aud) && \count($aud) === 1 ? $aud[0] : $aud;
+        return \count($aud) === 1 ? $aud[0] : $aud;
     }
 }
