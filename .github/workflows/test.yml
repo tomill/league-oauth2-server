@@ -14,5 +14,6 @@ jobs:
         with:
           php-version: '7.2'
 
+      - run: composer config github-oauth.github.com ${{ secrets.GITHUB_TOKEN }}
       - run: composer install --no-progress
       - run: vendor/bin/phpunit --testdox
